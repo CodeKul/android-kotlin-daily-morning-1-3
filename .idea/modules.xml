@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MorningAppKotlinHalf.iml" filepath="$PROJECT_DIR$/MorningAppKotlinHalf.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intentsandintentfilter/intentsandintentfilter.iml" filepath="$PROJECT_DIR$/intentsandintentfilter/intentsandintentfilter.iml" />
       <module fileurl="file://$PROJECT_DIR$/navdrawer/navdrawer.iml" filepath="$PROJECT_DIR$/navdrawer/navdrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/slider/slider.iml" filepath="$PROJECT_DIR$/slider/slider.iml" />
     </modules>

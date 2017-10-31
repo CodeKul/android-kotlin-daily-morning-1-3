@@ -1,1 +1,1 @@
-include ':app', ':navdrawer', ':slider'
+include ':app', ':navdrawer', ':slider', ':intentsandintentfilter'
