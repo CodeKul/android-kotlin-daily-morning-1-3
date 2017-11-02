@@ -8,7 +8,7 @@ import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
-    var intentSer: Intent? = null
+    private var intentSer: Intent? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
