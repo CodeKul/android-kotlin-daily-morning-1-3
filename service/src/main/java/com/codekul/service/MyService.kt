@@ -17,10 +17,15 @@ class MyService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
-        mp = MediaPlayer.create(this, R.raw.my)
+        Thread {
+            mp = MediaPlayer.create(this, R.raw.my)
+            mp?.start()
+        }.start()
+
+        /*mp = MediaPlayer.create(this, R.raw.my)
         mp?.start()
 
-        showInForeground()
+        showInForeground()*/
 
         return START_NOT_STICKY
     }
