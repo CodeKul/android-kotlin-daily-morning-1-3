@@ -1,6 +1,7 @@
 package com.codekul.service
 
 import android.content.Intent
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,7 +17,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onMpStart(view: View?) {
-        startService(intentSer)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intentSer)
+        } else {
+            startService(intentSer)
+        }
     }
 
     fun onMpStop(view: View?) {
