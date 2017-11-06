@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codekul.comman">
+    package="com.codekul.jobschedular">
 
     <application
         android:allowBackup="true"
@@ -18,14 +18,10 @@
         </activity>
 
         <service
-            android:name=".MyService"
+            android:name=".MyJobService"
+            android:enabled="true"
             android:exported="true"
-            >
-            <intent-filter>
-                <action android:name="com.codekul.action.CALC" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>
