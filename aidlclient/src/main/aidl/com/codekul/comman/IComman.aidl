@@ -1,5 +1,5 @@
 // IComman.aidl
-package com.codekul.aidlclient;
+package com.codekul.comman;
 
 
 interface IComman {

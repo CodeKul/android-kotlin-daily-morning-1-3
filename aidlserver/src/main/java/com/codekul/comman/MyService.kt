@@ -6,7 +6,6 @@ import android.os.IBinder
 
 class MyService : Service() {
 
-
     private val clc = MyCalc()
 
     override fun onBind(intent: Intent): IBinder? {

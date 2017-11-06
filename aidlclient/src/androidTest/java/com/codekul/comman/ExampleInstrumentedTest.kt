@@ -1,4 +1,4 @@
-package com.codekul.aidlclient
+package com.codekul.comman
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

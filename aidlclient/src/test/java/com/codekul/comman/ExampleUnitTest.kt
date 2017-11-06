@@ -1,4 +1,4 @@
-package com.codekul.aidlclient
+package com.codekul.comman
 
 import org.junit.Test
 
