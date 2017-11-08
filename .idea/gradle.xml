@@ -16,8 +16,10 @@
             <option value="$PROJECT_DIR$/intentsandintentfilter" />
             <option value="$PROJECT_DIR$/jobschedular" />
             <option value="$PROJECT_DIR$/navdrawer" />
+            <option value="$PROJECT_DIR$/notifications" />
             <option value="$PROJECT_DIR$/service" />
             <option value="$PROJECT_DIR$/slider" />
+            <option value="$PROJECT_DIR$/uithread" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
