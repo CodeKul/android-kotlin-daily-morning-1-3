@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/navdrawer" />
             <option value="$PROJECT_DIR$/notifications" />
             <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/sharedprefs" />
             <option value="$PROJECT_DIR$/slider" />
             <option value="$PROJECT_DIR$/uithread" />
           </set>

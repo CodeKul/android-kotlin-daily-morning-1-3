@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/navdrawer/navdrawer.iml" filepath="$PROJECT_DIR$/navdrawer/navdrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/notifications/notifications.iml" filepath="$PROJECT_DIR$/notifications/notifications.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharedprefs/sharedprefs.iml" filepath="$PROJECT_DIR$/sharedprefs/sharedprefs.iml" />
       <module fileurl="file://$PROJECT_DIR$/slider/slider.iml" filepath="$PROJECT_DIR$/slider/slider.iml" />
       <module fileurl="file://$PROJECT_DIR$/uithread/uithread.iml" filepath="$PROJECT_DIR$/uithread/uithread.iml" />
     </modules>
