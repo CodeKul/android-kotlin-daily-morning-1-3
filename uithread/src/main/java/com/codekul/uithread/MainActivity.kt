@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.support.v7.app.AlertDialog
 import android.view.View
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.stream.IntStream
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 
 class MainActivity : AppCompatActivity() {
-
 
     var hand: Handler? = null
 
@@ -22,7 +24,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onOkay(vw: View) {
-        MyTask().execute(0, 10/*params*/)
+        //MyTask(txtNm).execute(0, 10/*params*/)
+
+        val dialog = AlertDialog.Builder(this).setTitle("Android").create()
+
+        doAsync {
+            uiThread {
+                dialog.show()
+            }
+            for(i in 1..10) {
+                uiThread {
+                    txtNm.text = """ $i """
+                }
+                Thread.sleep(500)
+            }
+            uiThread {
+                dialog.dismiss()
+            }
+        }
     }
 
     fun handlerWay() {
@@ -34,7 +53,9 @@ class MainActivity : AppCompatActivity() {
         }.start()
     }
 
-    class MyTask : AsyncTask<Int/*params*/, Int/*progress*/, Boolean/*Result*/>() {
+    class MyTask(txtNm : TextView) : AsyncTask<Int/*params*/, Int/*progress*/, Boolean/*Result*/>() {
+
+        private val txt = txtNm
 
         override fun onPreExecute() {
             super.onPreExecute()
@@ -43,6 +64,11 @@ class MainActivity : AppCompatActivity() {
 
         override fun doInBackground(vararg progress: Int?/*params*/): Boolean/*Result*/ {
             //Worker Thread
+
+            for (i in 1..10) {
+                Thread.sleep(500)
+                publishProgress(i)
+            }
 
             return true
         }
@@ -55,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun onProgressUpdate(vararg values: Int?/*progress*/) {
             super.onProgressUpdate(*values)
-
+            txt.text = """ ${values[0]} """
             //UI Thread
         }
     }
