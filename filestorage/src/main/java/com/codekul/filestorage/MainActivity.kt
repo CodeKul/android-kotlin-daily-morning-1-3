@@ -80,10 +80,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun wrtPubExt() {
-        File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "my.txt")
-                .writeText(
-                        "This is getting stored on external storage",
-                        Charset.defaultCharset()
-                )
+        if (Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED) {
+            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "my.txt")
+                    .writeText(
+                            "This is getting stored on external storage",
+                            Charset.defaultCharset()
+                    )
+        }
     }
 }
