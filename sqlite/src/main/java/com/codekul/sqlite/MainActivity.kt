@@ -4,12 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.arch.persistence.room.Room
 import android.util.Log
-import android.widget.EditText
 import com.codekul.sqlite.db.AppDb
 import com.codekul.sqlite.model.Car
 import org.jetbrains.anko.button
 import org.jetbrains.anko.editText
-import org.jetbrains.anko.find
 import org.jetbrains.anko.verticalLayout
 
 
@@ -18,8 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val db = Room.databaseBuilder(applicationContext,
-                AppDb::class.java, "android-db").build()
+        val db = Room.databaseBuilder(this,
+                AppDb::class.java, "android-db.db").build()
 
         val carDao = db.carDao()
 
@@ -35,13 +33,12 @@ class MainActivity : AppCompatActivity() {
             }
 
             button("Insert") {
-                carDao.insert(
-                        Car(
-                                12,
-                                crNm.text.toString(),
-                                cost.text.toString().toInt()
-                        )
-                )
+
+                val car = Car()
+                car.crCst = cost.text.toString().toInt()
+                car.crNm = crNm.text.toString()
+
+                carDao.insert(car)
             }
 
             button("Update") {
@@ -54,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
             button("Query") {
                 carDao.select().forEach {
-                    Log.i("@codekul", "Name - ${it.crNm} Cost ${it.crCst} Id - ${it.crId}")
+                    Log.i("@codekul", """ Name - ${it.crNm}  Cost - ${it.crCst}  Id - ${it.crId} """)
                 }
             }
         }

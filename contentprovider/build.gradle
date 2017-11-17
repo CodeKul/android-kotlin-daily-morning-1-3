@@ -1,15 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
-
 
     defaultConfig {
-        applicationId "com.codekul.sqlite"
+        applicationId "com.codekul.contentprovider"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
@@ -20,14 +16,22 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
         }
     }
-    compileOptions {
-        sourceCompatibility 1.7
-        targetCompatibility 1.7
+
+    kotlin {
+        experimental {
+            coroutines "enable"
+        }
     }
+
 }
 
 dependencies {
@@ -44,9 +48,4 @@ dependencies {
 
     implementation "org.jetbrains.anko:anko-sdk25-coroutines:0.10.2"
     implementation "org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.2"
-
-    implementation "android.arch.persistence.room:runtime:1.0.0"
-    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
-    kapt "android.arch.persistence.room:compiler:1.0.0"
 }
-

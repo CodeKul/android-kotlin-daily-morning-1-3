@@ -18,7 +18,6 @@ interface CarDao {
     @Delete
     fun delete(id: Long)
 
-    @Query("select * from user")
+    @Query("select * from Car")
     fun select(): List<Car>
-
 }

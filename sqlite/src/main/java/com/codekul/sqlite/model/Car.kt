@@ -1,6 +1,5 @@
 package com.codekul.sqlite.model
 
-import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
@@ -11,17 +10,10 @@ import android.arch.persistence.room.PrimaryKey
 class Car {
 
     @PrimaryKey
-    var crId: Long? = null
+    var crId: Long? = 0
 
-    @ColumnInfo(name = "crNm")
-    var crNm: String? = null
+    var crNm: String? = ""
 
-    @ColumnInfo(name = "crCst")
-    var crCst: Int? = null
-
-    constructor(crId: Long?, crNm: String?, crCst: Int?) {
-        this.crId = crId
-        this.crNm = crNm
-        this.crCst = crCst
-    }
+    var crCst: Int? = 0
 }
+
