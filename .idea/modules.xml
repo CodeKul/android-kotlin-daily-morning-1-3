@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/filestorage/filestorage.iml" filepath="$PROJECT_DIR$/filestorage/filestorage.iml" />
       <module fileurl="file://$PROJECT_DIR$/intentsandintentfilter/intentsandintentfilter.iml" filepath="$PROJECT_DIR$/intentsandintentfilter/intentsandintentfilter.iml" />
       <module fileurl="file://$PROJECT_DIR$/jobschedular/jobschedular.iml" filepath="$PROJECT_DIR$/jobschedular/jobschedular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsonparsing/jsonparsing.iml" filepath="$PROJECT_DIR$/jsonparsing/jsonparsing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsonparsing2/jsonparsing2.iml" filepath="$PROJECT_DIR$/jsonparsing2/jsonparsing2.iml" />
       <module fileurl="file://$PROJECT_DIR$/navdrawer/navdrawer.iml" filepath="$PROJECT_DIR$/navdrawer/navdrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/notifications/notifications.iml" filepath="$PROJECT_DIR$/notifications/notifications.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
