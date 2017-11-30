@@ -15,11 +15,13 @@
             <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/dialogs" />
             <option value="$PROJECT_DIR$/filestorage" />
+            <option value="$PROJECT_DIR$/googlemaps" />
             <option value="$PROJECT_DIR$/http" />
             <option value="$PROJECT_DIR$/intentsandintentfilter" />
             <option value="$PROJECT_DIR$/jobschedular" />
             <option value="$PROJECT_DIR$/jsonparsing" />
             <option value="$PROJECT_DIR$/jsonparsing2" />
+            <option value="$PROJECT_DIR$/location" />
             <option value="$PROJECT_DIR$/navdrawer" />
             <option value="$PROJECT_DIR$/notifications" />
             <option value="$PROJECT_DIR$/service" />
